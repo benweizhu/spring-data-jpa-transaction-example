@@ -1,4 +1,4 @@
-package me.zeph.spring.example.springdatajpatransactionexample;
+package me.zeph.spring.example.springdatajpatransactionexample.model;
 
 import lombok.*;
 
@@ -21,4 +21,7 @@ public class Company {
   @Column(name = "name")
   private String name;
 
+  @OneToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "company_address_id", referencedColumnName = "id")
+  private CompanyAddress companyAddress;
 }

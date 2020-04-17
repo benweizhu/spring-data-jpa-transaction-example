@@ -23,3 +23,18 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     unique: true
+              - column:
+                  name: company_address_id
+                  type: int
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: add-company-companyAddress-id-foreign-key-to-company
+      author: Benwei Zhu
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: company_address_id
+            baseTableName: company
+            constraintName: fk_company__company_address_id
+            referencedColumnNames: id
+            referencedTableName: company_address

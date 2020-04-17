@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
+      file: /db/changelog/db.changelog-company-address.yaml
+  - include:
       file: /db/changelog/db.changelog-company.yaml

@@ -1,4 +1,4 @@
-package me.zeph.spring.example.springdatajpatransactionexample;
+package me.zeph.spring.example.springdatajpatransactionexample.model;
 
 import lombok.*;
 
@@ -11,4 +11,5 @@ import lombok.*;
 public class CompanyDTO {
   private long id;
   private String name;
+  private String address;
 }

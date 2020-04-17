@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username: root
+
+  - changeSet:
+      id: create-company-companyAddress-table
+      author: Benwei Zhu
+      changes:
+        - createTable:
+            tableName: company_address
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+                    unique: true
