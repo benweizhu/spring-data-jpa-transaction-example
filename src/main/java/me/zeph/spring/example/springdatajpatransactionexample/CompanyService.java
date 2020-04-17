@@ -16,7 +16,7 @@ public class CompanyService {
     CompanyAddress companyAddress = CompanyAddress.builder().address(companyDTO.getAddress()).build();
     Company company = Company.builder().name(companyDTO.getName()).companyAddress(companyAddress).build();
 
-    Company saveCompany = companyRepository.saveAndFlush(company);
+    Company saveCompany = companyRepository.save(company);
 
     return CompanyDTO.builder()
         .id(saveCompany.getId())
